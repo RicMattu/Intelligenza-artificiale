@@ -1,16 +1,18 @@
-Questo markdown contiene una sintesi del contenuto dell'inserto del *Corriere della Sera* [^1]  
+Partendo dell'inserto del *Corriere della Sera* [^1]:  
 **INTELLIGENZA ARTIFICIALE GENERATIVA**(Guida all'utilizzo delle piattaforme)  
-*di Federico Cella e la redazione di Login*  
+*di Federico Cella*  
+Questo markdown contiene un confronto tra le principali piattaforme di Intelligenza artificiale generativa.
 
-| Nome | Azienda | Fondatore | Sede| Sito ufficiale |
-|:------------|:-------------          |:-------------  |:------------- |:-------------|
-| ChatGPT     |  OpenAI                | Sam Altman     | Silicon valley |Sito ufficiale |
-| Gemini      |  Google (DeepMind)     | Sundar Pichai  | Silicon valley |Sito ufficiale |
-| Copilot     | Microsoft| Fondatore | Sede| Sito ufficiale |
-| Claude      | Anthropic | Fondatore | Sede| Sito ufficiale |
-| Meta AI | Meta | Fondatore | Sede| Sito ufficiale |
-| Apple Intelligence | Apple | Fondatore | Sede| Sito ufficiale |
-| Nome | Azienda | Fondatore | Sede| Sito ufficiale |
+| Nome               | Azienda                | Fondatore      | Sede           | Sito ufficiale  |
+|:------------       |:-------------          |:-------------  |:-------------  |:-------------   |
+| ChatGPT            |  OpenAI                | Sam Altman     | San Francisco  | openai.com      |
+| Gemini             |  Google (DeepMind)     | Sundar Pichai  | San Francisco  | deepmind.google |
+| Copilot            | Microsoft              | -              | San Francisco  | copilot.microsoft.com |
+| Claude [^2]        | Anthropic              | Amodei brothers | San Francisco  | anthropic.com | 
+| Meta AI            | Meta                   | Reb Fergus, Yann LeCun, Serkan Piantino, Mark Zuckerberg | San Francisco | Sito ufficiale |
+| Apple Intelligence | Apple                  | Fondatore | Sede| Sito ufficiale |
+<!--| Nome               | Azienda | Fondatore | Sede| Sito ufficiale |-->
+[^2]: Fondata da ex collaboratori di Sam Altman che hanno fondato la loro startup perchè non si riconoscevano più nei valori di OpenAi (che dal 09/24 vuole diventare un'azienda a scopo di lucro), l'output è sempre sotooforma di testo (ma l'input può essere multimodale), ha una natura più B2B
 
 | Nome | Azienda | Fondatore | Sede| Sito ufficiale |
 |:------------|:-------------          |:-------------  |:------------- |:-------------|
