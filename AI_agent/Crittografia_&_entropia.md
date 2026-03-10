@@ -1,6 +1,5 @@
+![Completamento](https://img.shields.io/badge/Stato-In%20corso-yellow)
 # Entropia di una Google API Key
-
-
 L'entropia misura l'incertezza che ha un'osservatore che non conosce la chiave.  
 Matematicamente è la Shannon entropy, definita come:  
 $$H = log_2(|KeySpace|)$$  
