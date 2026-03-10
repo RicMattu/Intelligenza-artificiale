@@ -9,11 +9,11 @@ $KeySpace := $ lo spazio delle chiavi possibili
 
 
 # Esempio 
-La Google API Key ha 35 caratteri liberi Base64url cioè ciascun carattere può assumere uno dei
+La Google API Key ha 33 caratteri liberi Base64url cioè ciascun carattere può assumere uno dei
 64 valori possibili (A-Z, a-z, 0-9,-,_) quindi la dimensione dello spazio è:
-$$|KeySpace| = 64^35 = 2^{6 \times 35} = 2^210$$
+$$|KeySpace| = 64^{33} = 2^{6 \times 33} = 2^198$$
 da cui 
-> $$ H = 210 $$
+> $$ H = 198 $$ 
 
 
 
