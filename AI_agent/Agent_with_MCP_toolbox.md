@@ -1,6 +1,13 @@
 # Guida dettagliata all'uso di MCP toolbox con AI Agent 
 
 Riferimento originale: [link](https://googleapis.github.io/genai-toolbox/getting-started/introduction/).
+Per approfondire l'MCP come protocollo [clicca qui] (), in generale per procedere ci basta sapere che l'MCP è un modo standard che glli agenti AI usano per connettersi a tool esterni o a dati.
+
+## tool calling tradizionale vs MCP
+
+
+
+
 
 ### "requirements"
 
