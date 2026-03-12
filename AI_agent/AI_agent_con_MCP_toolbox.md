@@ -1,21 +1,59 @@
 # Guida dettagliata all'uso di MCP toolbox con AI Agent 
 
 Riferimento originale: [link](https://googleapis.github.io/genai-toolbox/getting-started/introduction/).
-Per approfondire l'MCP come protocollo [clicca qui] (), in generale per procedere ci basta sapere che l'MCP è un modo standard che glli agenti AI usano per connettersi a tool esterni o a dati.
+Per approfondire l'MCP come protocollo [clicca qui] (), in generale per procedere ci basta sapere che l'MCP è un modo standard che gli agenti AI usano per connettersi a servizi esterni.
 
-## tool calling tradizionale vs MCP
-
-
-
+## MCP Toolbox
+L'MCP toolbox è un server MCP per database, consente di non dover scrivere nè delle custom API, nè un server per connettersi al database manager. 
 
 
+
+
+
+# Section 2: tool.yaml
+Il file tool.yaml è il cuore del toolbox, consente di scrivere in yaml i tool che vogliamo che l'Agent utilizzi.
+L'eseguibile toolset "traduce" questo .yaml in tools MCP standard che poi ... __TODO__
+
+In questa sezione vediamo come configurare questo file.  
+Il file deve avere almeno una sezione `sources`, una `tools`, una `toolset` e una `prompts`.  
+(È possibile avere più di un file tools.yaml, in tal caso è sufficiente lanciare il comando che genera il server con il flag ```bash -tools-file tools.yaml ```).
+
+## Sources
+In questa sezione sono definite le sources che contengono i dati:
+```yaml
+# Esempio 1:
+kind: sources
+name: my-pg-source
+type: postgres
+host: 127.0.0.1
+port: 5432
+database: toolbox_db
+user: ${USER_NAME}
+password: ${PASSWORD}
+
+# Esempio 2:
+kind: sources
+name: magazzino-source
+type: postgres
+host: 127.0.0.1
+port: 5432
+database: magazzino_db #/var/lib/postgresql/18/main
+user: magazzino_user
+password: ***
+```
+Nei due esempi precedenti abbiamo specificato che i dati sono in un database postgres, nel primo caso abbiamo utilizzato environments variables.  
+È possibile inserire diverse sources nello stesso file.
+
+
+
+
+# Section 1: Starting
 ### "requirements"
 
 - Python 3.10+ (including pip and your preferred virtual environment tool for managing dependencies e.g. venv).
 - PostgreSQL 16+ and the psql client.
 
 ## Step 1: set up the db
-
 Avvio il terminale interattivo al localhost con utente (`-U postgres`) cioè con l'utente amministratore predefinito
 
 ```bash
