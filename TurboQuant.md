@@ -23,7 +23,25 @@ Letta l'introduzione, aggiungiamo alle due precedenti le seguenti domande:
 3. Cos'è la KV cache quantization?
 4. Cosa sono la  _absolute quality neutrality_ e la _marginal quality degradation_?
 
-## Introduzione
+## 1. Introduzione
+Nell'introduzione, viene definito il concetto di quantizzazione vettoriale (_compress high dimensional vectors by quantizing them–converting floating-point coordinate values to low-bitwidth integers–while minimizing distortion_) e vengono ricordati i lavori di Shannon che hanno stabilito che il minimo distrtion rate raggiungibile è determinato dalle proprietà statistiche della sorgente e della metrica di misura.  
+Dopodichè viene spiegamo perchè lo studio della VQ in generale è utile per gli LLM, principalmente vengono sostenute tre ragioni:
+- in generale, le capacità dei LLM dipendono dalla dimensione del modello e dalla lunghezza del contesto che riescono a mantenere, questo richiede un grande impiego di memoria e causa un tempo di latenza dovuto, sostanzialmente, ai tempi di comunicazione tra la memoria rigida e la RAM. La quantizzazione dei parametri può accorciare questa latenza. Qui gli autori osservano anche che i modelli di quantizzazione devono concentrarsi sulla compressione dei parametri preservando il prodotto scalare (che è quello che viene effettivamente usato dagli LLM).
+- i modelli decoder based (es. GPT, LLama) memorizzano key e value nella cosiddetta KV cache. La riduzione di questa cache senza compromettere l'accuratezza è uno dei problemi principali e la VQ lo affronta.
+- infine la vector search, fondamentale in ambito RAL, può essere resa più efficiente dalla VQ.  
+
+Se queste sono le motivazioni che giustificano la VQ in generale, TQ si propone in questo contesto come un modello che migliora il trade-off che tutti gli schemi di VQ devono affrontare: slow computation vs optimal distortion rate.
+Il TQ è un processo a due stadi, prima viene applicato un VQ con distortion rate ottimale in termini di MSE e dopo viene appicato un 1-bit quantizer al residuo , il risultato è un quantizer con poca distorsione e unbiased.
+
+## 1.1 Definizione del problema 
+Fedeli alla linea di non appesantire questa sintesi con formule, posticipiamo la definizione formale del problema.
+
+## 1.2 Lavori collegati
+In questa sezione, gli autori hanno lasciato un po' di briciole per approfondire argomenti collegati.
+1. La teoria della VQ inizia con Shannon e continua con vari contributi (Zador 1963, Gersho, etc..) soprattutto teorici.
+2. Online vs Offline:
+3. Online KV cache quantization.
+
 
 
 [^1]:Shannon
